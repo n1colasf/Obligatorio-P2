@@ -1,0 +1,18 @@
+C:\Users\Mariana\Desktop\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Mariana\Desktop\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Mariana\Desktop\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\bin\Debug\Dominio.dll
+C:\Users\Mariana\Desktop\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Mariana\Desktop\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\obj\Debug\Dominio.dll
+C:\Users\Mariana\Desktop\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Mariana\Desktop\P2\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\bin\Debug\Dominio.dll
+C:\Users\Mariana\Desktop\P2\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Mariana\Desktop\P2\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Mariana\Desktop\P2\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Mariana\Desktop\P2\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\obj\Debug\Dominio.dll
+C:\Users\Mariana\Desktop\P2\EntregaObligatorio1P2\EntregaObligatorio1P2\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Mariana\Desktop\MVC Obligatorio\Obligatorio2p2\Dominio\bin\Debug\Dominio.dll
+C:\Users\Mariana\Desktop\MVC Obligatorio\Obligatorio2p2\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Mariana\Desktop\MVC Obligatorio\Obligatorio2p2\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Mariana\Desktop\MVC Obligatorio\Obligatorio2p2\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Mariana\Desktop\MVC Obligatorio\Obligatorio2p2\Dominio\obj\Debug\Dominio.dll
+C:\Users\Mariana\Desktop\MVC Obligatorio\Obligatorio2p2\Dominio\obj\Debug\Dominio.pdb

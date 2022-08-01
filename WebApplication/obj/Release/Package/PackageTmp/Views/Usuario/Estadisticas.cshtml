@@ -1,0 +1,32 @@
+﻿@using Dominio
+@{
+    ViewBag.Title = "Estadisticas";
+}
+<h2>Estadisticas:</h2>
+<hr>
+<h3>Buscar los paquetes que incluyan cualquier canal seleccionado:</h3>
+<button id="btnPaquete" class="btn btn-primary">Ir</button>
+<hr>
+<h3>Visualizar todos los clientes que tengan compras cuyo venciemiento sea en los proximos 30 dias:</h3>
+<button id="btnClientesVencimiento" class="btn btn-primary">Ir</button>
+<hr>
+<h3>Visualizar los paquetes con mayor valor:</h3>
+<button id="btnPaqueteMayorValor" class="btn btn-primary">Ir</button>
+<br><br>
+<hr>
+<a href="/Usuario/AccesoOperador" class="btn btn-primary">Volver</a>
+
+@section script
+    {
+    <script>
+        let btnPaquete = document.getElementById("btnPaquete");
+        btnPaquete.addEventListener('click', () => { window.location.href = "/Paquete/MostrarCanales" });
+
+        let btnClientesVencimiento = document.getElementById("btnClientesVencimiento");
+        btnClientesVencimiento.addEventListener('click', () => { window.location.href = "/Usuario/ClientesConVencimiento" });
+
+        let btnPaqueteMayorValor = document.getElementById("btnPaqueteMayorValor");
+        btnPaqueteMayorValor.addEventListener('click', () => { window.location.href = "/Paquete/MostrarPaquetesMayorCosto" });
+    </script>
+
+}

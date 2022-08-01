@@ -1,0 +1,37 @@
+﻿@using Dominio
+@{
+    ViewBag.Title = "MostrarCanales";
+}
+
+<h2>Seleccionar canal:</h2>
+<select id="selectCanales">
+    <option>Seleccione un canal</option>
+    @foreach (Canal unC in ViewBag.Canales)
+    {
+        <option value="@unC.Id">@unC.Nombre</option>
+    }
+</select>
+
+@if (ViewBag.Paquetes != null)
+{
+    <h3>Paquetes que incluyen el canal seleccionado:</h3>
+    <hr>
+    foreach (Paquete unP in ViewBag.Paquetes)
+    {
+        <p>- @unP.Nombre</p>
+        <br>
+    }
+
+}
+<br>
+<br>
+<a href="/Usuario/Estadisticas" class="btn btn-primary">Volver</a>
+
+@section script
+    {
+    <script>
+        let select = document.getElementById("selectCanales")
+        select.addEventListener('change', () => { window.location.href = "/paquete/BuscarPaquete?idCanal=" + select.value })
+    </script>
+
+}

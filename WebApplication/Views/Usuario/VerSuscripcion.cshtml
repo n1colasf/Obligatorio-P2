@@ -1,0 +1,26 @@
+﻿@using Dominio
+@{
+    ViewBag.Title = "VerSuscripcion";
+}
+
+<h2>Estas seguro que quieres cancelar la suscripcion?</h2>
+
+<p>@ViewBag.Paquete.Nombre</p>
+
+<button id="btnConfirmar" value="@ViewBag.Paquete.Id" class="btn btn-primary">Confirmar</button>
+<button id="btnCancelar" class="btn btn-primary">Cancelar</button>
+
+
+@section script
+    {
+    <script>
+
+        let btnConfirmar = document.getElementById("btnConfirmar");
+        btnConfirmar.addEventListener('click', () => { window.location.href = "/Usuario/CancelarSuscripcion?idPaquete=" + btnConfirmar.value + "&cedula=" + @Session["LogueadoCedula"]});
+
+        let btnCancelar = document.getElementById("btnCancelar");
+        btnCancelar.addEventListener('click', () => { window.location.href = "/Usuario/Suscripciones?cedula=@Session["LogueadoCedula"]" });
+
+    </script>
+
+}

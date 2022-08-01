@@ -1,0 +1,23 @@
+﻿@using Dominio
+@{
+    ViewBag.Title = "MostrarClientes";
+}
+
+<h2>Clientes: </h2>
+<p>
+    A continuacion se muestran todos los clientes ordenados por apellido ascendentemente, 
+    en caso de que haya más de un cliente con el mismo apellido se mostrarán ordenados
+    por nombre ascendentemente.
+</p>
+@foreach (Usuario unC in ViewBag.Clientes)
+{
+    <h3>Cliente: @unC.Cedula</h3>
+    <p>Nombre: @unC.UnC.Nombre </p>
+    <p>Apellido: @unC.UnC.Apellido</p>
+    <hr>
+}
+<a href="/Usuario/AccesoOperador" class="btn btn-primary">Volver</a>
+@section script
+    {
+    <script></script>
+}

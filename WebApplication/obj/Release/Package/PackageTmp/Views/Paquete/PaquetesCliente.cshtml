@@ -1,0 +1,20 @@
+﻿@using Dominio
+
+@{
+    var contador = 0;
+    ViewBag.Title = "Index";
+}
+<h2>Paquetes disponibles:</h2>
+@foreach (Paquete unP in ViewBag.Paquetes)
+{
+    contador++;
+    <h3>@contador -  @unP.Nombre</h3>
+    <a href="/Paquete/MostrarPaquete?id=@unP.Id&cedula=@Session["LogueadoCedula"]" class="btn btn-primary">Ver Mas</a>
+    <hr>
+}
+<br><a href="/Usuario/AccesoCliente?cedula=@Session["LogueadoCedula"]" class="btn btn-primary">Volver</a>
+@section script
+    {
+    <script></script>
+}
+

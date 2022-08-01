@@ -1,0 +1,50 @@
+﻿@using Dominio
+@{
+    ViewBag.Title = "MostrarCompras";
+}
+
+<h2>Mostrar compras</h2>
+<p>Visualiza todas las compras realizadas entre dos fechas y el costo total de ellas.</p>
+<form action="/Compra/MostrarCompras" method="post">
+    <div class="form-group">
+        <label for="fecha1">Fecha inicial:</label>
+        <input type="date" class="form-control" name="fecha1" id="fechaDesde" required/>
+    </div>
+
+    <div class="form-group">
+        <label for="fecha2">Fecha final:</label>
+        <input type="date" class="form-control" name="fecha2" id="fechaHasta" required/>
+    </div>
+
+    <button class="btn btn-primary" type="submit" id="btnConsultar">Consultar</button><a href="/Usuario/AccesoOperador" class="btn btn-primary">Volver</a>
+    
+</form>
+<br>
+@if (ViewBag.ComprasFecha != null && ViewBag.CostoCompras != null)
+{
+    foreach (Compra unaC in ViewBag.ComprasFecha)
+    {
+        <p>Paquete: @unaC.UnP.Nombre</p>
+        <p>Fecha compra: @unaC.FechaCompra</p>
+        <p>Fecha vencimiento: @unaC.FechaVencimiento</p>
+    }
+    <h3>Costo total: @ViewBag.CostoCompras</h3>
+}
+   
+
+@section script
+    {
+    <script>
+        let btnConsultar = document.getElementById("btnConsultar");
+        btnConsultar.addEventListener('click', () => {
+
+            let desde = document.getElementById("fechaDesde").value;
+            let hasta = document.getElementById("fechaHasta").value;
+            console.log(desde);
+            console.log(hasta);
+            if (desde > hasta) {
+                alert("La fecha inicial debe ser menor a la final");
+            }
+        });
+    </script>
+}

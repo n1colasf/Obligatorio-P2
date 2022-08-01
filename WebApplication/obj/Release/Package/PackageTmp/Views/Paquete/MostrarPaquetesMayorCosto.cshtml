@@ -1,0 +1,19 @@
+﻿
+@using Dominio
+@{
+    ViewBag.Title = "MostrarPaquetesMayorCosto";
+}
+
+<h2>Paquetes:</h2>
+<p>A continuacion se muestran el o los paquetes con mayor costo.</p>
+
+@foreach (Paquete unP in ViewBag.PaquetesConMayorCosto)
+{
+    <p>@unP.Nombre</p>
+}
+
+<a href="/Usuario/Estadisticas" class="btn btn-primary">Volver</a>
+@section script
+    {
+    <script></script>
+}

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/estilos.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container"> 
+            <div class="navbar-header"> 
+                <a class="navbar-brand" href="/usuario/Index">TVision</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @if (Session["Logueado"] == null)
+                    {
+                        <li><a href="/usuario/Login">Ingresar</a></li>
+                        <li><a href="/Paquete/Index">Ver Paquetes</a></li>
+                        <li><a href="/Usuario/RegistrarseComoCliente">Registrarse</a></li>
+                    }
+                    else
+                    {
+                        if ((string)Session["LogueadoRol"] == "Operador")
+                        {
+                            <li><a href="/Compra/MostrarCompras">Ver compras</a></li>
+                            <li><a href="/Usuario/MostrarClientes">Ver clientes</a></li>
+                            <li><a href="/Paquete/Index">Ver Paquetes</a></li>
+                            <li><a href="/Usuario/Estadisticas">Estadisticas</a></li>
+                        }
+                        else if ((string)Session["LogueadoRol"] == "Cliente")
+                        {
+                            <li><a href="/Usuario/Suscripciones?cedula=@Session["LogueadoCedula"]">Suscripciones</a></li>
+                            <li><a href="/Paquete/PaquetesCliente">Ver Paquetes</a></li>
+                        }
+                        <li><a href="/Usuario/Index">Cerrar</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Obligatorio 2 Programacion 2 - Nicolas Fernandez, Mariana Goldsztajn, Sebastian Paulos</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("script");
+</body>
+</html>

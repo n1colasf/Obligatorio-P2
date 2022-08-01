@@ -1,0 +1,35 @@
+﻿@using Dominio
+@{
+    ViewBag.Title = "ClientesConVencimiento";
+}
+
+<h2>Clientes:</h2>
+<p>
+    A continuacion se muestran aquellos clientes cuyas compras tengan vencimientos
+    en los proximos 30 dias.
+</p>
+<br>
+@if (ViewBag.ClientesVencimiento.Count == 0)
+{
+    <p>No hay ningun cliente</p>
+}
+else
+{
+    foreach (Usuario unU in ViewBag.ClientesVencimiento)
+    {
+        <h4>@unU.UnC.Nombre , @unU.UnC.Apellido :</h4>
+        foreach (Compra unaC in unU.UnC.Compras)
+        {
+            <p>@unaC.FechaCompra - @unaC.FechaVencimiento - @unaC.UnP.Nombre</p>
+
+        }
+        <br>
+    }
+}
+<br>
+<a href="/Usuario/Estadisticas" class="btn btn-primary">Volver</a>
+
+@section script
+    {
+    <script></script>
+}

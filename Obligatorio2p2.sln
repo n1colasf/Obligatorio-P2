@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1401
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{11C566FA-59AD-432F-B0F1-F6790B00B250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{CF54E532-CDEF-43C9-8452-ABF33A4D329F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11C566FA-59AD-432F-B0F1-F6790B00B250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C566FA-59AD-432F-B0F1-F6790B00B250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C566FA-59AD-432F-B0F1-F6790B00B250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C566FA-59AD-432F-B0F1-F6790B00B250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF54E532-CDEF-43C9-8452-ABF33A4D329F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF54E532-CDEF-43C9-8452-ABF33A4D329F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF54E532-CDEF-43C9-8452-ABF33A4D329F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF54E532-CDEF-43C9-8452-ABF33A4D329F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D82691D-D28A-4432-B1CA-D011DA9FAC66}
+	EndGlobalSection
+EndGlobal

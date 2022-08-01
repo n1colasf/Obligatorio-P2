@@ -1,0 +1,44 @@
+﻿@using Dominio
+@{
+    var contador = 0;
+    ViewBag.Title = "Index";
+}
+
+@foreach (Paquete unP in ViewBag.Paquetes)
+{
+    contador++;
+    <h3>Paquete: @contador </h3>
+    <p>ID: @unP.Id</p>
+    <p>Nombre: @unP.Nombre</p>
+    <p>Precio base: @unP.PrecioBase</p>
+    <p>Precio final: @unP.PrecioFinal</p>
+
+    if (unP.Promo)
+    {
+        <p>Tiene promo: Si</p>
+    }
+    else
+    {
+        <p>Tiene promo: No</p>
+    }
+    <h4>Canales</h4>
+    foreach (Canal unC in unP.CanalesPaquete())
+    {
+        <p>@unC.Nombre</p>
+    }
+    <hr>
+}
+<br>
+@if ((String)Session["LogueadoRol"] == "Operador")
+{
+    <a href="/Usuario/AccesoOperador" class="btn btn-primary">Volver</a>
+}
+else
+{
+    <a href="/Usuario/Index" class="btn btn-primary">Volver</a>
+}
+@section script
+    {
+    <script></script>
+
+}

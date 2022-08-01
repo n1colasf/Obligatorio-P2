@@ -1,0 +1,30 @@
+﻿@using Dominio
+@{
+    ViewBag.Title = "MostrarPaquete";
+}
+
+<h2>@ViewBag.Paquete.Nombre</h2>
+<h3>Informacion del paquete:</h3>
+<p>Precio base: @ViewBag.Paquete.PrecioBase</p>
+<p>Precio final: @ViewBag.Paquete.PrecioFinal</p>
+<h3>Canales incluidos:</h3>
+@foreach (Canal unC in ViewBag.Paquete.CanalesPaquete())
+{
+    <p>@unC.Nombre</p>
+}
+@if (ViewBag.TienePaquete)
+{
+    <h4>Ya estas suscripto a este paquete!</h4>
+}
+else
+{
+    <button class="btn btn-primary" id="btnSuscribirse" value="@ViewBag.Paquete.Id">SUSCRIBIRSE</button>
+}
+<br><a href="/Paquete/PaquetesCliente" class="btn btn-primary">Volver</a>
+@section script
+    {
+    <script>
+        let boton = document.getElementById("btnSuscribirse")
+        boton.addEventListener('click', () => { window.location.href = "/Paquete/ComprarPaquete?id=" + boton.value + "&cedula=" + @Session["LogueadoCedula"]})
+    </script>
+}
